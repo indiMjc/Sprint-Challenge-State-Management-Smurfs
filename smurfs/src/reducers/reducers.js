@@ -48,6 +48,24 @@ export const reducer = (state = initialState, action) => {
 				error: action.payload
 			};
 		}
+		case "NAME_INPUT": {
+			return {
+				...state,
+				name: action.payload
+			};
+		}
+		case "AGE_INPUT": {
+			return {
+				...state,
+				age: action.payload
+			};
+		}
+		case "HEIGHT_INPUT": {
+			return {
+				...state,
+				height: action.payload
+			};
+		}
 		default:
 			return state;
 	}
