@@ -1,5 +1,20 @@
 import axios from "axios";
 
+export const handleNameChange = e => ({
+	type: "NAME_INPUT",
+	payload: e
+});
+
+export const handleAgeChange = e => ({
+	type: "AGE_INPUT",
+	payload: e
+});
+
+export const handleHeightChange = e => ({
+	type: "HEIGHT_INPUT",
+	payload: e
+});
+
 export const getSmurfs = () => {
 	return function(dispatch) {
 		dispatch({ type: "LOADING_GET" });
