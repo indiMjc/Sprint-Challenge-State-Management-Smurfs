@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { getSmurfs } from "../actions/actions";
+import { getSmurfs, postSmurfs } from "../actions/actions";
 import Smurfs from "./Smurfs";
 import "./App.css";
 import SmurfForm from "./SmurfForm";
@@ -23,7 +23,7 @@ const App = () => {
 			)}
 			<button onClick={() => dispatch(getSmurfs())}>Get Smurfs</button>
 			<SmurfForm />
-			<button>Post Smurf</button>
+			<button onClick={() => dispatch(postSmurfs())}>Post Smurf</button>
 		</div>
 	);
 };
